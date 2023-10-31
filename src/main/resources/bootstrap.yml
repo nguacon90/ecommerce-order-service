@@ -1,0 +1,37 @@
+spring:
+  profiles:
+#    active: local
+    active: localdev
+#    active: dev
+  application:
+    name: qtn-order-service
+  cloud:
+    config:
+      uri: http://192.168.10.101:8081
+      fail-fast: true
+      username: user
+      password: NjY2UVROQCM1Njc4
+    inetutils:
+      preferredNetworks:
+        - 10.8
+  data:
+    elasticsearch:
+      cluster-name: common-cluster
+      cluster-nodes: 192.168.10.100:9300
+#  jpa:
+#    show-sql: true
+#     s properties:
+#        hibernate:
+#          enable_lazy_load_no_trans: true
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/qtn_orders?useSSL=false&useUnicode=yes&characterEncoding=utf8
+#    username: root
+#    password: 12345678
+#eureka:
+#  instance:
+#    preferIpAddress: true
+#  client:
+#    serviceUrl:
+#      fetchRegistry: true
+#      registryFetchIntervalSeconds: 5
+#      defaultZone: http://192.168.10.200:1111/eureka/
